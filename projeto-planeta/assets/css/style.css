@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "poppina", sans-serif;
+}
+
+body{
+    background: linear-gradient(270deg,#87eff6 0%,#ffffff 100%);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+
+    & .navbar ul{
+        display: flex;
+        gap: 50px;
+
+        & li a{
+            color: black;
+        }
+    }
+    
+    & .menu{
+        display: none;
+    }
+}
+
+main {
+    padding: 40px 80px; 
+ 
+    & .home{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100vh - 185px);
+        gap: 60px;
+
+        & .lado-esquerdo{
+            width: 604px;
+            min-width: 330px;
+            display: flex;
+            flex-direction: column;
+            gap: 58px;
+
+            & .content{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                & p:first-child{
+                    color: #ff2323;
+                    font-size: 24px;
+                    font-weight: 600px;
+                }
+
+                & p:last-child{
+                    font-size: 18px;
+                }
+
+                & h1{
+                    font-size: 40px;
+                }
+            }
+
+            & .btns{
+                display: flex;
+                gap: 16px;
+
+                & button{
+                    padding: 14PX 20px;
+                    border-radius: 16px;
+                    border: none;
+                    background: #4abbc2;
+                    
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+                & button:last-child{
+                background: transparent;
+                border: 2px solid #4abbc2;
+                color: #4abbc2;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1050px){  
+    main.home{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:850px) {
+    header .navbar{
+        display: none;
+    }
+    header .menu{
+        display: flex;
+    }
+}
+
+@media screen and (max-width:680px){
+    header, main{
+        padding: 40px 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main .home {
+
+        & .lado-esquerdo .content h1{
+            font-size: 36px;
+        }
+
+        & .lado-direito img{
+            width: 100%;
+        }
+    }
+    }
+
+    @media screen and (max-width:400px) {
+        main .home .lado-esquerdo .btns{
+            flex-direction: column;
+        }
+    }
